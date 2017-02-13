@@ -927,7 +927,7 @@ function filter_get_all_local_settings($contextid) {
     global $DB;
     return array(
         $DB->get_records('filter_active', array('contextid' => $contextid), 'filter', 'filter,active'),
-        $DB->get_records('filter_config', array('contextid' => $contextid), 'filter,name', 'filter,name,value'),
+        $DB->get_records('filter_config', array('contextid' => $contextid), 'filter,name', 'id,filter,name,value'),
     );
 }
 
